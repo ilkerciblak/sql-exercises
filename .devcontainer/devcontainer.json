@@ -1,0 +1,19 @@
+{
+  "name": "POSTGRESQL EXERCISE CONTAINER",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "exercise-db",
+  "postStartCommand": "psql -U postgres -d pagila -c \"SELECT COUNT(*) FROM film;\"",
+  "forwardPorts": [5433],
+  "remoteUser": "root",
+  "workspaceFolder": "/exercises",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-ossdata.vscode-postgresql",
+        "inferrinizzard.prettier-sql-vscode",
+        "adpyke.vscode-sql-formatter"
+      ]
+    }
+  }
+}

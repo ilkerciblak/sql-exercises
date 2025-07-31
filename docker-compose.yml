@@ -1,0 +1,26 @@
+services:
+  exercise-db:
+    image: postgres:16
+    container_name: sql_pg
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: pagila
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+      - pgdata:/var/lib/postgresql/data
+      - ./exercises:/exercises
+
+  adminer:
+    image: adminer:latest
+    restart: always
+    ports:
+      - "8081:8080"
+    depends_on:
+      - exercise-db
+
+volumes:
+  pgdata:
