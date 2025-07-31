@@ -1,0 +1,4 @@
+-- Medium Difficulty
+-- Topic: Filtering And Aggregation with Multiple Conditions
+-- Finding Top Customers by Rental Duration and Payment Amount
+-- Result must present customer's id, first name, last name, total rental duration of ... blabla
