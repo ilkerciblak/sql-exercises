@@ -102,3 +102,60 @@ pagila-# LIMIT 3;
 
 ## Query Files and Curriculum
 
+In order to provide some real world problems in communatication language, curriculum and pratices planned in collaboration with an AI assistant, with carefully designed exercises that gradually increase in complexity. Rules were simple, 
+- Each SQL exercise must start with a Topic Header.
+- Provide a human-readable Exercise Title that includes a difficulty level.
+- The exercise description should be written in full sentences, avoiding bullet points or list formats.
+- Include a Curriculum Reminder explaining the concept being practiced.
+- Most exercises should be medium difficulty, but every 3rd or 4th exercise should be hard or complex.
+- Maintain the same writing style used previously: full paragraphs, clear context.
+- For Chapter C (Advanced SQL Patterns), include a lecture section before each exercise, while still applying the above rules.
+
+Lastly, I followed some rules while practicing. Mostly create the structure that consists of, 
+- Lecture Topic 
+- Lecture Content
+- Exercise Topic | Difficulty
+- Exercise Title
+- Exercise Description, Requirements and Data Presentation Rules
+- Given Hints
+- Problem Solving: Using the schema presentation try to design the solution before writing scripts
+
+See [Advanced Example 1](./exercises/c-advanced-sql-patterns/rolling_30_days_customer_spend_tracker.sql) and [Advanced Example 2](./exercises/c-advanced-sql-patterns/cumulative_spendings_per_customer_over_time.sql) to observe solving patterns.
+
+Also the curriculum was as shown:
+
+A. Basics (✅ )
+These exercises introduce:
+* SELECT, FROM, WHERE, ORDER BY
+* Simple JOINs (mostly INNER JOIN)
+* Basic GROUP BY with COUNT, SUM, AVG, etc.
+* Filtering groups using HAVING
+* Sorting, limiting results
+* Simple date filters and column extractions (EXTRACT(MONTH FROM ...))
+You're currently wrapping up this section — combining joins and aggregations confidently.
+
+B. Intermediate Logic & Multi-Table Aggregations (✅)
+This block focuses on:
+* Complex JOIN chains (4+ tables)
+* Proper use of DISTINCT, nested aggregations
+* Aliases, column renaming for clarity
+* Precise filtering with HAVING
+* Connecting normalized data (e.g., customer → rental → inventory → film → category)
+* Performance-aware choices (avoiding over-joining or mis-aggregating)
+You are now practicing professional-level query design using relational reasoning.
+
+C. Advanced SQL Patterns (⚙️ Currrently Here)
+
+* WITH (CTEs) for modular queries
+* Subqueries inside SELECT, FROM, and WHERE
+* Window functions (ROW_NUMBER, RANK, SUM() OVER(...))
+* Set operations (UNION, INTERSECT, EXCEPT)
+* CASE statements for conditional logic
+
+D. Edge Cases, Performance & Robustness
+In the final stage:
+* Handle nulls, missing data, inconsistent schemas
+* Deal with duplicates, LEFT JOIN vs INNER JOIN behavior
+* Introduce basic query optimization tips
+* Ensure queries still work under schema evolution
+* Think about indexes, data distribution and cost in real-world querying
