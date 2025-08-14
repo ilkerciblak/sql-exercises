@@ -7,7 +7,8 @@
 ![Postgres Image](https://img.shields.io/badge/PostgeSQL_Image-v16.0.0-gray?style=flat&logo=postgreSQL&logoColor=white&labelColor=4169E1)
 ![Adminer Image](https://img.shields.io/badge/latest-gray?style=flat&logo=Adminer&labelColor=34567C&label=Adminer%20Image)
 
-
+![Contributes](https://img.shields.io/github/contributors/ilkerciblak/sql-exercises?color=blue)
+![Last Commit](https://img.shields.io/github/last-commit/ilkerciblak/sql-exercises?color=blue)
 </div>
 
 ## Repository Introduction
@@ -29,9 +30,13 @@ That so, in order to sharpen `my` SQL knowledge and skills using [PostgreSQL](ht
 ### Development Environment Setup and Data Initialization
 In order to serve initial data, as mentioned before, [devrimgunduz/pagila](https://github.com/devrimgunduz/pagila) repository will be used. Special thanks to him, we could just deal with sharpening query knowledge phase without wasting time with data generation.
 
-Initial database configuration is secured with the [docker-compose.yml](./docker-compose.yml) file, by means of `bind mount volumes` of  [init.db](./init/init.sql) and [docker-entrypoint-initdb.d]() (in docker container). To prevent any problem due to that init.db file, before building the container follow the guideline.
+Initial database configuration is secured with the [docker-compose.yml](./docker-compose.yml) file, by means of `bind mount volumes` of  [init.db](./init/init.sql) and [docker-entrypoint-initdb.d]() (in docker container). To prevent any problem due to that init.db file, you can re-build the whole environment via following guideline below.
 
-
+#### 0. Git clone This Project
+```bash
+$ cd to_your_projects_roots
+$ git clone https://github.com/ilkerciblak/sql-exercises.git
+```
 
 #### 1. First Change Directory to Project Folder
 ```bash
